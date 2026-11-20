@@ -46,3 +46,15 @@ services:
       - type: rewrite
         source: /api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth
         destination: /api/fixtures/github-auth.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts
+        destination: /api/fixtures/user-artifacts.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count
+        destination: /api/fixtures/user-artifacts-count.json
+      - type: rewrite
+        source: /api/account/raven_eligible
+        destination: /api/fixtures/account-eligibility.json
+      - type: rewrite
+        source: /api/account/ss_enterprise_eligible
+        destination: /api/fixtures/account-eligibility.json

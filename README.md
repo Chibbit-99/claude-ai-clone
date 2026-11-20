@@ -45,6 +45,10 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks` | `/api/fixtures/activation-tasks.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/projects/count` | `/api/fixtures/projects-count.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth` | `/api/fixtures/github-auth.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts` | `/api/fixtures/user-artifacts.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count` | `/api/fixtures/user-artifacts-count.json` |
+| `/api/account/raven_eligible` | `/api/fixtures/account-eligibility.json` |
+| `/api/account/ss_enterprise_eligible` | `/api/fixtures/account-eligibility.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -65,8 +69,7 @@ demo organization UUID. The scoped bootstrap and user-access fixtures use
 the uploaded capture as a schema reference, not as deployable account data.
 The privacy-consent fixture returns an empty consent list, including for
 `?prefix=cookies.`. It does not grant or store consent. The upstream bundle's
-full response contract has not been verified. Referral and eligibility
-endpoints remain unmocked.
+full response contract has not been verified. Referral remains unmocked.
 
 ## Missing pages
 
@@ -93,3 +96,14 @@ The GitHub auth GET fixture reports a disconnected integration; it does not
 perform OAuth. Intercom is unsupported and the demo intentionally supplies no
 Intercom credentials. Upstream bundles may still log widget or performance
 warnings.
+
+Artifacts and account eligibility are read-only demo fixtures.
+
+The browser intercepts only the four captured same-origin pricing POST requests
+for the demo organization and fetches static JSON instead. Consumer and team
+fixtures distinguish monthly and yearly requests; individual pricing is a
+combined response and enterprise pricing is unavailable (`null`). These are
+illustrative USD amounts, not live quotes. No checkout, subscriptions, tax
+calculation, or promo validation is implemented. The complete upstream pricing
+schema and visual rendering are unverified. Direct POST requests bypass the
+browser adapter; the local server returns an explicit JSON `501` for them.

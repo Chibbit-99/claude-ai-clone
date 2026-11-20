@@ -1,0 +1,15 @@
+{
+  "currency": "USD",
+  "product_prices_per_billing_period": {
+    "max_5x_monthly": {
+      "price": 10000,
+      "currency": "USD",
+      "taxDisplay": null
+    },
+    "max_20x_monthly": {
+      "price": 20000,
+      "currency": "USD",
+      "taxDisplay": null
+    }
+  }
+}
