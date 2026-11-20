@@ -8,6 +8,12 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
+    '/new': '/index.html',
+    '/api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings': '/api/fixtures/claude-code-user-settings.json',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/chat_conversations_v2': '/api/fixtures/chat-conversations.json',
+    '/api/account_profile': '/api/fixtures/account-profile.json',
+    '/api/organizations/discoverable': '/api/fixtures/discoverable-organizations.json',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks': '/api/fixtures/activation-tasks.json',
     '/v1/privacy-consents': '/v1/privacy-consents.json',
     '/edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start': '/edge-api/app-start.json',
     '/api/bootstrap/00000000-0000-4000-8000-000000000002/current_user_access': '/edge-api/current-user-access.json',
