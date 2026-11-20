@@ -1,149 +1,62 @@
-# Extracted clone
+# Claude web UI clone
 
-Serve or open `index.html` as before. It is generated from four source files in `assets/`:
+An unofficial, **UI-only demo** of the Claude web app. It starts from a captured page, loads the upstream frontend assets, and uses local JSON fixtures to give the interface a fictional account. The goal is to explore how the interface looks and behaves without building a full backend.
 
-- `index.template.html` — markup and placeholders that control where each section goes.
-- `scripts.js` — inline JavaScript, separated by named `clone-section` comments.
-- `styles.css` — inline CSS, separated by named `clone-section` comments.
-- `data.json` — named inline JSON bodies stored as arrays of lines for readability.
+You can explore the composer and model picker, settings, projects, artifacts, and upgrade screens. The demo can show different plans and illustrative prices, but **it cannot generate AI responses, create real accounts, connect services, or process payments**. Chat history and projects start empty, and most settings are read-only. This is not an Anthropic product or a standalone Claude client.
 
-Edit the four source files, then regenerate the root `index.html` and the files under `assets/runtime/`. The browser loads the generated JavaScript and CSS through ordinary `<script src>` and `<link rel="stylesheet">` tags. They stay in their original document order rather than being bundled into one script or stylesheet. Inline JSON stays in the HTML because the captured page expects it to be available synchronously in the DOM.
+## Run locally
 
-```sh
-python3 tools/split-clone.py build  # regenerate index.html and assets/runtime/
-python3 tools/split-clone.py check  # verify generated files match their sources
-```
-
-To extract from a fresh standalone capture, first replace `index.html` with that capture, then run `python3 tools/split-clone.py split` and rebuild. Do not use `split` on the generated, linked entry point. The extractor is designed for this capture's markup, not as a general-purpose HTML parser.
-
-## Local preview
+You’ll need Python 3.9 or later; there are no Python packages or Node dependencies to install.
 
 ```sh
+git clone https://github.com/Chibbit-99/claude-ai-clone.git
+cd claude-ai-clone
 python3 tools/serve.py
 ```
 
-## Mock endpoints
+Open **http://localhost:8000/**. Use `python3 tools/serve.py --port 8080` if port 8000 is in use. Run the preview server instead of opening `index.html` directly: the server provides the page and API rewrites the demo needs. Internet access is required for the upstream scripts, styles, and fonts.
 
-The local preview server and `render.yaml` route the exact extensionless API
-paths to static JSON files without redirecting. Query strings don't select
-separate fixtures. For an existing Render Static Site that isn't managed by
-this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
+## Try another plan
 
-| Source | Destination |
+Choose `free`, `pro`, `max`, or `ultra`:
+
+```sh
+python3 tools/set-demo-plan.py pro
+```
+
+Reload the page after changing the preset. This updates both bootstrap fixtures so the initial load and organization refresh agree. It changes the displayed plan and mock model availability, not actual access or billing.
+
+On GitHub, use **Actions → Set demo plan → Run workflow**, then choose the target branch and plan. The workflow commits changes to the selected branch, so it needs write permission. Redeploy if your host doesn’t automatically pick up that commit.
+
+## How the demo works
+
+| Path | Purpose |
 | --- | --- |
-| `/edge-api/bootstrap` | `/edge-api/bootstrap.json` |
-| `/edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start` | `/edge-api/app-start.json` |
-| `/api/bootstrap/00000000-0000-4000-8000-000000000002/current_user_access` | `/edge-api/current-user-access.json` |
-| `/onboarding` | `/index.html` |
-| `/edge-api/client-health/check` | `/edge-api/client-health/check.json` |
-| `/v1/privacy-consents` | `/v1/privacy-consents.json` |
-| `/new` | `/index.html` |
-| `/api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings` | `/api/fixtures/claude-code-user-settings.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/chat_conversations_v2` | `/api/fixtures/chat-conversations.json` |
-| `/api/account_profile` | `/api/fixtures/account-profile.json` |
-| `/api/organizations/discoverable` | `/api/fixtures/discoverable-organizations.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks` | `/api/fixtures/activation-tasks.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/projects/count` | `/api/fixtures/projects-count.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth` | `/api/fixtures/github-auth.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts` | `/api/fixtures/user-artifacts.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count` | `/api/fixtures/user-artifacts-count.json` |
-| `/api/account/raven_eligible` | `/api/fixtures/account-eligibility.json` |
-| `/api/account/ss_enterprise_eligible` | `/api/fixtures/account-eligibility.json` |
-| `/api/team-signup/voucher-eligible` | `/api/fixtures/voucher-eligibility.json` |
-| `/api/oauth/organizations/00000000-0000-4000-8000-000000000002/oauth_tokens` | `/api/fixtures/oauth-tokens.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/library/mine` | `/api/fixtures/library-mine.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/kyc_status` | `/api/fixtures/kyc-status.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences` | `/api/fixtures/notification-preferences.json` |
-| `/api/auth/sessions/list-active` | `/api/fixtures/active-sessions.json` |
-| `/api/auth/mfa/keys` | `/api/fixtures/mfa-keys.json` |
-| `/api/auth/mfa` | `/api/fixtures/mfa-status.json` |
-| `/api/account/deletion-allowed` | `/api/fixtures/deletion-allowed.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/projects` | `/api/fixtures/projects.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/projects_v2` | `/api/fixtures/projects-v2.json` |
-| `/api/organizations/00000000-0000-4000-8000-000000000002/activation/cowork/tasks` | `/api/fixtures/activation-tasks.json` |
-| `/v1/code/channels` | `/api/fixtures/code-channels.json` |
-| `/v1/code/notifications` | `/api/fixtures/code-notifications.json` |
-| `/v1/code/sessions` | `/api/fixtures/code-sessions.json` |
+| [`assets/`](assets/) | Captured HTML template, extracted JavaScript and CSS, and inline JSON source data. |
+| [`index.html`](index.html), [`assets/runtime/`](assets/runtime/) | Generated page and linked assets. The app still loads upstream bundles. |
+| [`edge-api/`](edge-api/) | Fictional account, organization, plan, model selector, and access data used during startup. |
+| [`api/fixtures/`](api/fixtures/), [`v1/`](v1/) | Static responses for selected requests, including settings, projects, and pricing. |
+| [`assets/pricing-fetch.js`](assets/pricing-fetch.js) | Maps four demo pricing POST calls to static JSON GETs. It does not handle checkout. |
+| [`tools/serve.py`](tools/serve.py), [`render.yaml`](render.yaml) | Exact-path rewrites for local preview and Render Static Sites. |
 
-`bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
-bootstrap fixture follows the supplied response example's account, membership,
-organization, and model-config structure, using a fictional demo identity. The
-public anonymous response was also checked with `growthbook_format=sdk` and
-`statsig_hashing_algorithm=djb2`. The fixture mirrors its top-level fields,
-using empty feature, copy, and gated payloads rather than live configuration.
-Unlike the anonymous response, the fixture includes the demo account. The
-authenticated response contract and external app startup remain unverified.
-Model entries are display metadata, not working inference.
+## Make changes
 
-`session-check.js` accepts `{"control":null}` without taking action. It only
-calls `/edge-api/client-health/reload-request` if a reload is requested, so that
-endpoint is not mocked. No real accounts, authentication, or chat API are provided.
+Edit the template or the extracted sections in `assets/`, not the generated HTML or runtime copies. Keep the named section markers intact. The build keeps the original script and stylesheet order and puts DOM-read JSON back inline.
 
-The organization-scoped bootstrap route serves a separate fixture only for the
-demo organization UUID. The scoped bootstrap and user-access fixtures use
-the uploaded capture as a schema reference, not as deployable account data.
-The privacy-consent fixture returns an empty consent list, including for
-`?prefix=cookies.`. It does not grant or store consent. The upstream bundle's
-full response contract has not been verified. Referral remains unmocked.
+```sh
+python3 tools/split-clone.py build  # regenerate index.html and assets/runtime/
+python3 tools/split-clone.py check  # verify generated files are in sync
+```
 
-## Missing pages
+JSON fixture changes don’t require rebuilding the HTML. When adding an endpoint, update both the local rewrite map in `tools/serve.py` and `render.yaml`. Match the path without the query string. Use fictional data only; don’t commit browser cookies, tokens, or personal account captures.
 
-The root `404.html` is the custom error page for Render Static Sites. It sends
-top-level visitors back to `/` while keeping the HTTP response a 404. Fetches
-and subresources don't execute the redirect script. The local preview serves
-this page only for top-level browser navigation to missing paths. Don't add a
-catch-all Render rewrite to `/`: that would mask missing API and asset requests.
-This does not redirect valid client-side routes or implement onboarding.
+## Deploy to Render
 
-The `/new` rewrite serves the same app entry point as `/`. The demo GET
-fixtures under `api/fixtures/` provide an empty chat history (including
-starred chats), no discoverable organizations or activation tasks, default
-Claude Code settings, and a fictional profile. They do not persist state
-or implement chat creation. The upstream bundle’s full response contracts
-for these fixtures have not been verified.
+[`render.yaml`](render.yaml) defines a Render Static Site that publishes the repository root. If your existing site isn’t managed by a Blueprint, copy the `routes` entries into **Redirects/Rewrites** as **Rewrite** rules. These include page routes such as `/new` and API routes that serve JSON. Don’t add a catch-all rewrite to `/`: missing APIs and assets should still return 404 rather than HTML. The custom [`404.html`](404.html) sends top-level visitors back to the homepage.
 
-Both bootstrap fixtures include the captured model selector catalogs and model
-metadata, but keep fictional account info and demo model preferences. Pro-only selector locks are removed for the simulated Pro organization;
-other disabled entries are retained. This is display metadata, not model access. Chat history
-is intentionally empty and the project count is zero.
+## Known limitations
 
-The GitHub auth GET fixture reports a disconnected integration; it does not
-perform OAuth. Intercom is unsupported and the demo intentionally supplies no
-Intercom credentials. Upstream bundles may still log widget or performance
-warnings.
-
-Artifacts and account eligibility are read-only demo fixtures.
-
-The browser intercepts only the four captured same-origin pricing POST requests
-for the demo organization and fetches static JSON instead. Consumer and team
-fixtures distinguish monthly and yearly requests; individual pricing is a
-combined response and enterprise pricing is unavailable (`null`). These are
-illustrative USD amounts, not live quotes. No checkout, subscriptions, tax
-calculation, or promo validation is implemented. The complete upstream pricing
-schema and visual rendering are unverified. Direct POST requests bypass the
-browser adapter; the local server returns an explicit JSON `501` for them.
-
-The demo OAuth token-list fixture returns an empty array. It does not start
-OAuth or expose credentials. The Salesforce connector uses a local placeholder icon.
-
-Settings fixtures are read-only demo responses: an empty personal library,
-a simulated verified identity status, and no saved notification preferences.
-
-Account security fixtures are read-only demo data. They do not manage real
-sessions, MFA keys, account deletion, identity verification, or subscriptions.
-
-## Switch the demo plan
-
-Once the workflow is on the default branch, use **Actions → Set demo plan →
-Run workflow**, select the target branch and `free`, `pro`, `max`, or `ultra`.
-It updates both bootstrap fixtures and commits only if they changed. The
-repository must allow the workflow token to write to the selected branch.
-Redeploy if your host does not automatically pick up the commit.
-
-You can also apply a preset locally with `python3 tools/set-demo-plan.py pro`.
-Presets simulate plan labels, capabilities, rate-limit tier metadata, and the
-captured Free-to-Pro picker locks. They do not provide real entitlements.
-
-The demo chat selector seeds each model with its recommended reasoning effort
-(or the first supported option) and a supported thinking mode. Models with no
-reasoning options are left without a level.
+- A `200` from a fixture confirms it was served, not that the upstream client accepts its full shape. Some screens may show loading placeholders, and unmocked endpoints may return 404.
+- The support widget is unsupported. Intercom warnings can appear because the demo intentionally provides no Intercom credentials.
+- Displayed prices are illustrative USD amounts. There is no live pricing, checkout, subscription, or identity-verification service.
+- The frontend depends on external bundles, so changes to those assets can affect the demo even when this repository hasn’t changed.
