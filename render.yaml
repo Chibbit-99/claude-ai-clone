@@ -40,3 +40,6 @@ services:
       - type: rewrite
         source: /api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks
         destination: /api/fixtures/activation-tasks.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/projects/count
+        destination: /api/fixtures/projects-count.json

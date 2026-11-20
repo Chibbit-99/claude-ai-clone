@@ -12,7 +12,8 @@
     },
     "settings": {
       "has_finished_claudeai_onboarding": true,
-      "has_started_claudeai_onboarding": true
+      "has_started_claudeai_onboarding": true,
+      "default_model": "claude-haiku-5-5"
     },
     "memberships": [
       {
@@ -45,9 +46,9 @@
           "billable_usage_paused_until": null,
           "claude_ai_bootstrap_models_config": [
             {
-              "model": "claude-fable-5-2",
-              "name": "Claude Fable 5.2",
-              "description": "For your toughest challenges",
+              "model": "claude-haiku-5-5",
+              "name": "Haiku 5.5",
+              "description": "Fastest for quick answers",
               "paprika_modes": [
                 "extended"
               ],
@@ -134,5 +135,112 @@
   "org_growthbook": {
     "features": {},
     "hashing_algorithm": "djb2"
+  },
+  "model_selector_config": [
+    {
+      "id": "chat",
+      "models": [
+        {
+          "id": "claude-haiku-5-5",
+          "name": "Haiku 5.5",
+          "short_name": "Haiku",
+          "description": "Fastest for quick answers",
+          "section": "main",
+          "capabilities": {
+            "compass": true,
+            "gsuite_tools": true,
+            "mm_images": true,
+            "mm_pdf": true,
+            "web_search": true
+          },
+          "thinking": {
+            "type": "effort_and_mode",
+            "description": "Higher effort means more thorough responses, but takes longer and uses your limits faster.",
+            "effort_options": [
+              {
+                "id": "low",
+                "name": "Low"
+              },
+              {
+                "id": "medium",
+                "name": "Medium",
+                "recommended": true,
+                "badge": {
+                  "message": "Recommended",
+                  "variant": "neutral"
+                }
+              },
+              {
+                "id": "high",
+                "name": "High"
+              },
+              {
+                "id": "xhigh",
+                "name": "Extra"
+              },
+              {
+                "id": "max",
+                "name": "Max",
+                "badge": {
+                  "message": "8\u00d7 or more usage",
+                  "variant": "warning"
+                },
+                "tooltip": {
+                  "content": "Claude thinks longer with Max effort and can consume 8\u00d7 or more usage than Medium."
+                }
+              }
+            ],
+            "mode_options": [
+              {
+                "id": "auto",
+                "name": "Thinking",
+                "description": "Can think for more complex tasks"
+              }
+            ],
+            "always_on": true
+          },
+          "hard_limit": 950000,
+          "quick_select": true
+        }
+      ],
+      "description": "Fable is included in Max and Ultra plans, or available with usage credits on Pro. [Learn more](https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access)",
+      "settings_vocabulary": {
+        "create_mode": {
+          "default": 1
+        },
+        "effort_level": {
+          "high": 3,
+          "low": 1,
+          "max": 5,
+          "medium": 2,
+          "xhigh": 4
+        },
+        "thinking_mode": {
+          "auto": 2,
+          "extended": 1,
+          "off": 3
+        }
+      }
+    }
+  ],
+  "model_selector_state": [
+    {
+      "id": "chat",
+      "model": "claude-haiku-5-5",
+      "thinking": {
+        "type": "effort_and_mode",
+        "effort": "medium",
+        "mode": "auto"
+      },
+      "thinking_by_model": []
+    }
+  ],
+  "claude_ai_available_models": {
+    "models": [
+      {
+        "model_id": "claude-haiku-5-5",
+        "minimum_tier": "free"
+      }
+    ]
   }
 }
