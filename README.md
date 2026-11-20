@@ -49,6 +49,7 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count` | `/api/fixtures/user-artifacts-count.json` |
 | `/api/account/raven_eligible` | `/api/fixtures/account-eligibility.json` |
 | `/api/account/ss_enterprise_eligible` | `/api/fixtures/account-eligibility.json` |
+| `/api/team-signup/voucher-eligible` | `/api/fixtures/voucher-eligibility.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,

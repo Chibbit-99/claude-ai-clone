@@ -2,22 +2,24 @@
   "currency": "USD",
   "product_prices_per_billing_period": {
     "max_5x_monthly": {
-      "price": 10000,
       "currency": "USD",
       "taxDisplay": {
         "show_included": false,
         "tax_label": null
       },
-      "country": "US"
+      "country": "US",
+      "basePrice": 10000,
+      "taxAmount": null
     },
     "max_20x_monthly": {
-      "price": 20000,
       "currency": "USD",
       "taxDisplay": {
         "show_included": false,
         "tax_label": null
       },
-      "country": "US"
+      "country": "US",
+      "basePrice": 20000,
+      "taxAmount": null
     }
   },
   "country": "US",
