@@ -1,0 +1,40 @@
+html[data-desktop-boot-placeholder]:not([data-boot-ui-ready])
+  [data-boot-surface],
+html[data-desktop-boot-placeholder]:not([data-boot-ui-ready]):not(
+    [data-boot-standalone]
+  )
+  body {
+  background: 0 0 !important;
+}
+html[data-desktop-boot-placeholder]:not([data-boot-ui-ready])
+  [data-page-loading] {
+  visibility: hidden;
+}
+html[data-desktop-boot-placeholder][data-boot-ui-hold]:not([data-boot-ui-ready])
+  body {
+  opacity: 0 !important;
+}
+html[data-desktop-boot-placeholder][data-boot-ui-hold]:not([data-boot-ui-ready])
+  body:after {
+  content: "";
+  z-index: 2147483647;
+  position: fixed;
+  inset: 0;
+}
+#desktop-boot-drag-strip {
+  display: none;
+}
+html[data-desktop-boot-placeholder]:not([data-boot-ui-ready])
+  #desktop-boot-drag-strip {
+  z-index: -1;
+  app-region: drag;
+  height: 48px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+html[data-desktop-boot-placeholder] #boot-recovery {
+  top: calc(48px + 0.5rem) !important;
+}

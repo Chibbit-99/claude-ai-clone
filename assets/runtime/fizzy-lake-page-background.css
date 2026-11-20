@@ -1,0 +1,17 @@
+:where(html:not([data-cds-theme])).cds-root[data-cds-fizzy-lake~="color"] {
+  --cds-surface-1: #ffffff;
+}
+@media screen {
+  :where(
+      html:not([data-cds-theme])
+    ).cds-root[data-cds-fizzy-lake~="color"][data-mode="dark"] {
+    --cds-surface-1: #191919;
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  :where(
+      html:not([data-cds-theme])
+    ).cds-root[data-cds-fizzy-lake~="color"][data-mode="system"] {
+    --cds-surface-1: #191919;
+  }
+}
