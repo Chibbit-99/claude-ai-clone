@@ -1,0 +1,17 @@
+{
+  "price": 30000,
+  "currency": "USD",
+  "taxDisplay": null,
+  "prices_by_tier": {
+    "team_plan_standard_seat": {
+      "price": 30000,
+      "currency": "USD",
+      "taxDisplay": null
+    },
+    "team_plan_tier_1_seat": {
+      "price": 30000,
+      "currency": "USD",
+      "taxDisplay": null
+    }
+  }
+}

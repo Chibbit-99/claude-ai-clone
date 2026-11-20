@@ -8,6 +8,10 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
+    '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts': '/api/fixtures/user-artifacts.json',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count': '/api/fixtures/user-artifacts-count.json',
+    '/api/account/raven_eligible': '/api/fixtures/account-eligibility.json',
+    '/api/account/ss_enterprise_eligible': '/api/fixtures/account-eligibility.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth': '/api/fixtures/github-auth.json',
     '/new': '/index.html',
     '/api/organizations/00000000-0000-4000-8000-000000000002/projects/count': '/api/fixtures/projects-count.json',
@@ -25,6 +29,13 @@ REWRITES = {
 }
 
 
+BILLING_PREFIX = '/api/billing/00000000-0000-4000-8000-000000000002/'
+PRICING_PATHS = {BILLING_PREFIX + endpoint for endpoint in (
+    'consumer_pricing', 'cw_pricing', 'individual_plan_pricing/v2',
+    'ss_enterprise_pricing',
+)}
+
+
 class Handler(SimpleHTTPRequestHandler):
     extensions_map = {
         **SimpleHTTPRequestHandler.extensions_map,
@@ -35,6 +46,21 @@ class Handler(SimpleHTTPRequestHandler):
     def translate_path(self, path):
         return super().translate_path(REWRITES.get(urlsplit(path).path, path))
 
+
+    def do_POST(self):
+        if urlsplit(self.path).path not in PRICING_PATHS:
+            self.send_error(501, 'Unsupported POST endpoint')
+            return
+        body = (b'{"type":"error","error":{"type":"not_implemented",'
+                b'"message":"Pricing is unavailable in this demo."}}\n')
+        self.close_connection = True
+        self.send_response(501)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Content-Length', str(len(body)))
+        self.send_header('Cache-Control', 'no-store')
+        self.send_header('Connection', 'close')
+        self.end_headers()
+        self.wfile.write(body)
 
     def send_error(self, code, message=None, explain=None):
         if (code == 404 and self.command == 'GET'
