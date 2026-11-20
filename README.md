@@ -61,6 +61,9 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/organizations/00000000-0000-4000-8000-000000000002/projects` | `/api/fixtures/projects.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/projects_v2` | `/api/fixtures/projects-v2.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/activation/cowork/tasks` | `/api/fixtures/activation-tasks.json` |
+| `/v1/code/channels` | `/api/fixtures/code-channels.json` |
+| `/v1/code/notifications` | `/api/fixtures/code-notifications.json` |
+| `/v1/code/sessions` | `/api/fixtures/code-sessions.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -128,3 +131,19 @@ a simulated verified identity status, and no saved notification preferences.
 
 Account security fixtures are read-only demo data. They do not manage real
 sessions, MFA keys, account deletion, identity verification, or subscriptions.
+
+## Switch the demo plan
+
+Once the workflow is on the default branch, use **Actions → Set demo plan →
+Run workflow**, select the target branch and `free`, `pro`, `max`, or `ultra`.
+It updates both bootstrap fixtures and commits only if they changed. The
+repository must allow the workflow token to write to the selected branch.
+Redeploy if your host does not automatically pick up the commit.
+
+You can also apply a preset locally with `python3 tools/set-demo-plan.py pro`.
+Presets simulate plan labels, capabilities, rate-limit tier metadata, and the
+captured Free-to-Pro picker locks. They do not provide real entitlements.
+
+The demo chat selector seeds each model with its recommended reasoning effort
+(or the first supported option) and a supported thinking mode. Models with no
+reasoning options are left without a level.

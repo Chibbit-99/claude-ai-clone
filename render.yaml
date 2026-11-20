@@ -94,3 +94,12 @@ services:
       - type: rewrite
         source: /api/organizations/00000000-0000-4000-8000-000000000002/activation/cowork/tasks
         destination: /api/fixtures/activation-tasks.json
+      - type: rewrite
+        source: /v1/code/channels
+        destination: /api/fixtures/code-channels.json
+      - type: rewrite
+        source: /v1/code/notifications
+        destination: /api/fixtures/code-notifications.json
+      - type: rewrite
+        source: /v1/code/sessions
+        destination: /api/fixtures/code-sessions.json

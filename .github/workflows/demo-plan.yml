@@ -1,0 +1,34 @@
+name: Set demo plan
+on:
+  workflow_dispatch:
+    inputs:
+      plan:
+        description: Fictional plan shown by the clone
+        required: true
+        type: choice
+        options: [free, pro, max, ultra]
+        default: pro
+permissions:
+  contents: write
+concurrency:
+  group: demo-plan-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  update:
+    if: github.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update bootstrap fixtures
+        env:
+          DEMO_PLAN: ${{ inputs.plan }}
+        run: |
+          python3 tools/set-demo-plan.py "$DEMO_PLAN"
+          python3 tools/split-clone.py check
+          git diff --check
+          git add edge-api/bootstrap.json edge-api/app-start.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Set demo plan to $DEMO_PLAN"
+          git push origin "HEAD:$GITHUB_REF"
