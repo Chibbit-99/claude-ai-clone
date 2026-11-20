@@ -44,6 +44,7 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/organizations/discoverable` | `/api/fixtures/discoverable-organizations.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks` | `/api/fixtures/activation-tasks.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/projects/count` | `/api/fixtures/projects-count.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth` | `/api/fixtures/github-auth.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -83,6 +84,12 @@ Claude Code settings, and a fictional profile. They do not persist state
 or implement chat creation. The upstream bundle’s full response contracts
 for these fixtures have not been verified.
 
-Both bootstrap fixtures advertise one demo model using the captured selector
-configuration shape. This is display metadata, not model access. Chat history
+Both bootstrap fixtures include the captured model selector catalogs and model
+metadata, but keep fictional account info and demo model preferences. Plan
+restrictions are retained. This is display metadata, not model access. Chat history
 is intentionally empty and the project count is zero.
+
+The GitHub auth GET fixture reports a disconnected integration; it does not
+perform OAuth. Intercom is unsupported and the demo intentionally supplies no
+Intercom credentials. Upstream bundles may still log widget or performance
+warnings.

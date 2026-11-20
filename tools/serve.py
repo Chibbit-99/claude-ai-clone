@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
+    '/api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth': '/api/fixtures/github-auth.json',
     '/new': '/index.html',
     '/api/organizations/00000000-0000-4000-8000-000000000002/projects/count': '/api/fixtures/projects-count.json',
     '/api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings': '/api/fixtures/claude-code-user-settings.json',
