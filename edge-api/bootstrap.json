@@ -34,7 +34,8 @@
             "files_api_enabled": false
           },
           "capabilities": [
-            "chat"
+            "chat",
+            "claude_pro"
           ],
           "parent_organization_uuid": null,
           "rate_limit_tier": "auto_api_evaluation",
