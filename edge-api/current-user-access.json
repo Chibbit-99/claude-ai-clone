@@ -1,0 +1,18 @@
+{
+  "features": [
+    {
+      "feature": "chat",
+      "status": "available"
+    }
+  ],
+  "organization_permissions": [],
+  "account_features": [],
+  "core_skill_names": [],
+  "code_execution_network_egress_enabled": false,
+  "code_execution_network_egress_template": null,
+  "code_execution_network_egress_settable": null,
+  "artifacts_setting_blocks_classic_sharing": false,
+  "classic_sharing_block_reason": null,
+  "features_source": "live",
+  "trusted_device_enrollment_due": false
+}

@@ -8,7 +8,9 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
-    '/edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start': '/edge-api/bootstrap.json',
+    '/edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start': '/edge-api/app-start.json',
+    '/api/bootstrap/00000000-0000-4000-8000-000000000002/current_user_access': '/edge-api/current-user-access.json',
+    '/onboarding': '/index.html',
     '/edge-api/bootstrap': '/edge-api/bootstrap.json',
     '/edge-api/client-health/check': '/edge-api/client-health/check.json',
 }

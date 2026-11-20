@@ -6,7 +6,13 @@ services:
     routes:
       - type: rewrite
         source: /edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start
-        destination: /edge-api/bootstrap.json
+        destination: /edge-api/app-start.json
+      - type: rewrite
+        source: /api/bootstrap/00000000-0000-4000-8000-000000000002/current_user_access
+        destination: /edge-api/current-user-access.json
+      - type: rewrite
+        source: /onboarding
+        destination: /index.html
       - type: rewrite
         source: /edge-api/bootstrap
         destination: /edge-api/bootstrap.json
