@@ -27,6 +27,7 @@
             "files_api_enabled": false
           },
           "capabilities": [
+            "chat",
             "api",
             "api_individual",
             "customer_terms:standard"
@@ -62,7 +63,8 @@
           ]
         }
       }
-    ]
+    ],
+    "invites": []
   },
   "statsig": {
     "user": {},
