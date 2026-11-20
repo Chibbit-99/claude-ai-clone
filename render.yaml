@@ -5,6 +5,9 @@ services:
     staticPublishPath: .
     routes:
       - type: rewrite
+        source: /edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start
+        destination: /edge-api/bootstrap.json
+      - type: rewrite
         source: /edge-api/bootstrap
         destination: /edge-api/bootstrap.json
       - type: rewrite
