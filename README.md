@@ -32,6 +32,7 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | Source | Destination |
 | --- | --- |
 | `/edge-api/bootstrap` | `/edge-api/bootstrap.json` |
+| `/edge-api/bootstrap/00000000-0000-4000-8000-000000000002/app_start` | `/edge-api/bootstrap.json` |
 | `/edge-api/client-health/check` | `/edge-api/client-health/check.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
@@ -47,3 +48,7 @@ Model entries are display metadata, not working inference.
 `session-check.js` accepts `{"control":null}` without taking action. It only
 calls `/edge-api/client-health/reload-request` if a reload is requested, so that
 endpoint is not mocked. No real accounts, authentication, or chat API are provided.
+
+The organization-scoped bootstrap route reuses the demo fixture only for the
+fixture organization UUID. It is not a general organization API. User access,
+privacy-consent, referral, and eligibility endpoints are not mocked.
