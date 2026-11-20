@@ -54,6 +54,10 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/organizations/00000000-0000-4000-8000-000000000002/library/mine` | `/api/fixtures/library-mine.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/kyc_status` | `/api/fixtures/kyc-status.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences` | `/api/fixtures/notification-preferences.json` |
+| `/api/auth/sessions/list-active` | `/api/fixtures/active-sessions.json` |
+| `/api/auth/mfa/keys` | `/api/fixtures/mfa-keys.json` |
+| `/api/auth/mfa` | `/api/fixtures/mfa-status.json` |
+| `/api/account/deletion-allowed` | `/api/fixtures/deletion-allowed.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -117,4 +121,7 @@ The demo OAuth token-list fixture returns an empty array. It does not start
 OAuth or expose credentials. The Salesforce connector uses a local placeholder icon.
 
 Settings fixtures are read-only demo responses: an empty personal library,
-no identity verification, and no saved notification preferences.
+a simulated verified identity status, and no saved notification preferences.
+
+Account security fixtures are read-only demo data. They do not manage real
+sessions, MFA keys, account deletion, identity verification, or subscriptions.

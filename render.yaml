@@ -73,3 +73,15 @@ services:
       - type: rewrite
         source: /api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences
         destination: /api/fixtures/notification-preferences.json
+      - type: rewrite
+        source: /api/auth/sessions/list-active
+        destination: /api/fixtures/active-sessions.json
+      - type: rewrite
+        source: /api/auth/mfa/keys
+        destination: /api/fixtures/mfa-keys.json
+      - type: rewrite
+        source: /api/auth/mfa
+        destination: /api/fixtures/mfa-status.json
+      - type: rewrite
+        source: /api/account/deletion-allowed
+        destination: /api/fixtures/deletion-allowed.json
