@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: claude-ai-clone
+    runtime: static
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /edge-api/bootstrap
+        destination: /edge-api/bootstrap.json
+      - type: rewrite
+        source: /edge-api/client-health/check
+        destination: /edge-api/client-health/check.json

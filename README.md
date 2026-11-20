@@ -19,5 +19,31 @@ To extract from a fresh standalone capture, first replace `index.html` with that
 ## Local preview
 
 ```sh
-python3 -m http.server 8000 --bind 0.0.0.0
+python3 tools/serve.py
 ```
+
+## Mock endpoints
+
+The local preview server and `render.yaml` route the exact extensionless API
+paths to static JSON files without redirecting. Query strings don't select
+separate fixtures. For an existing Render Static Site that isn't managed by
+this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
+
+| Source | Destination |
+| --- | --- |
+| `/edge-api/bootstrap` | `/edge-api/bootstrap.json` |
+| `/edge-api/client-health/check` | `/edge-api/client-health/check.json` |
+
+`bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
+bootstrap fixture follows the supplied response example's account, membership,
+organization, and model-config structure, using a fictional demo identity. The
+public anonymous response was also checked with `growthbook_format=sdk` and
+`statsig_hashing_algorithm=djb2`. The fixture mirrors its top-level fields,
+using empty feature, copy, and gated payloads rather than live configuration.
+Unlike the anonymous response, the fixture includes the demo account. The
+authenticated response contract and external app startup remain unverified.
+Model entries are display metadata, not working inference.
+
+`session-check.js` accepts `{"control":null}` without taking action. It only
+calls `/edge-api/client-health/reload-request` if a reload is requested, so that
+endpoint is not mocked. No real accounts, authentication, or chat API are provided.
