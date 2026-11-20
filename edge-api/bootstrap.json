@@ -6,14 +6,13 @@
     "full_name": "Demo User",
     "display_name": "Demo",
     "age_is_verified": true,
-    "phone_is_verified": true,
-    "phone_number": "+12025550100",
     "accepted_clickwrap_versions": {
       "consumer-terms": "demo",
       "aup": "demo"
     },
     "settings": {
-      "has_finished_claudeai_onboarding": true
+      "has_finished_claudeai_onboarding": true,
+      "has_started_claudeai_onboarding": true
     },
     "memberships": [
       {
@@ -34,10 +33,7 @@
             "files_api_enabled": false
           },
           "capabilities": [
-            "chat",
-            "api",
-            "api_individual",
-            "customer_terms:standard"
+            "chat"
           ],
           "parent_organization_uuid": null,
           "rate_limit_tier": "auto_api_evaluation",
@@ -71,7 +67,14 @@
         }
       }
     ],
-    "invites": []
+    "invites": [],
+    "is_verified": true,
+    "is_anonymous": false,
+    "onboarding_complete": true,
+    "verified_phone_number_last4": null,
+    "workspace_memberships": [],
+    "never_accepted_legal_document_types": [],
+    "completed_verification_at": "2025-01-01T00:00:00Z"
   },
   "statsig": {
     "user": {},
@@ -98,5 +101,23 @@
     "gates": [],
     "locale": "en-US"
   },
-  "gated_imports": {}
+  "gated_imports": {},
+  "current_user_access": {
+    "features": [
+      {
+        "feature": "chat",
+        "status": "available"
+      }
+    ],
+    "organization_permissions": [],
+    "account_features": [],
+    "core_skill_names": [],
+    "code_execution_network_egress_enabled": false,
+    "code_execution_network_egress_template": null,
+    "code_execution_network_egress_settable": null,
+    "artifacts_setting_blocks_classic_sharing": false,
+    "classic_sharing_block_reason": null,
+    "features_source": "live",
+    "trusted_device_enrollment_due": false
+  }
 }
