@@ -9,7 +9,7 @@
   "pricePerSeat": 30000,
   "pricePerSeatPerTier": {
     "team_standard": 30000,
-    "team_tier_1": 30000
+    "team_tier_1": 150000
   },
   "taxAmount": null
 }

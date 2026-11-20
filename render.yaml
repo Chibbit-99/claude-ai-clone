@@ -61,3 +61,15 @@ services:
       - type: rewrite
         source: /api/team-signup/voucher-eligible
         destination: /api/fixtures/voucher-eligibility.json
+      - type: rewrite
+        source: /api/oauth/organizations/00000000-0000-4000-8000-000000000002/oauth_tokens
+        destination: /api/fixtures/oauth-tokens.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/library/mine
+        destination: /api/fixtures/library-mine.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/kyc_status
+        destination: /api/fixtures/kyc-status.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences
+        destination: /api/fixtures/notification-preferences.json

@@ -8,6 +8,10 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
+    '/api/organizations/00000000-0000-4000-8000-000000000002/library/mine': '/api/fixtures/library-mine.json',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/kyc_status': '/api/fixtures/kyc-status.json',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences': '/api/fixtures/notification-preferences.json',
+    '/api/oauth/organizations/00000000-0000-4000-8000-000000000002/oauth_tokens': '/api/fixtures/oauth-tokens.json',
     '/api/team-signup/voucher-eligible': '/api/fixtures/voucher-eligibility.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts': '/api/fixtures/user-artifacts.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count': '/api/fixtures/user-artifacts-count.json',

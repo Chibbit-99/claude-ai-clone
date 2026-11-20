@@ -50,6 +50,10 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/account/raven_eligible` | `/api/fixtures/account-eligibility.json` |
 | `/api/account/ss_enterprise_eligible` | `/api/fixtures/account-eligibility.json` |
 | `/api/team-signup/voucher-eligible` | `/api/fixtures/voucher-eligibility.json` |
+| `/api/oauth/organizations/00000000-0000-4000-8000-000000000002/oauth_tokens` | `/api/fixtures/oauth-tokens.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/library/mine` | `/api/fixtures/library-mine.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/kyc_status` | `/api/fixtures/kyc-status.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/notification/preferences` | `/api/fixtures/notification-preferences.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -108,3 +112,9 @@ illustrative USD amounts, not live quotes. No checkout, subscriptions, tax
 calculation, or promo validation is implemented. The complete upstream pricing
 schema and visual rendering are unverified. Direct POST requests bypass the
 browser adapter; the local server returns an explicit JSON `501` for them.
+
+The demo OAuth token-list fixture returns an empty array. It does not start
+OAuth or expose credentials. The Salesforce connector uses a local placeholder icon.
+
+Settings fixtures are read-only demo responses: an empty personal library,
+no identity verification, and no saved notification preferences.
