@@ -8,6 +8,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
+    '/api/team-signup/voucher-eligible': '/api/fixtures/voucher-eligibility.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts': '/api/fixtures/user-artifacts.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/user_artifacts/count': '/api/fixtures/user-artifacts-count.json',
     '/api/account/raven_eligible': '/api/fixtures/account-eligibility.json',

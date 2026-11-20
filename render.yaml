@@ -58,3 +58,6 @@ services:
       - type: rewrite
         source: /api/account/ss_enterprise_eligible
         destination: /api/fixtures/account-eligibility.json
+      - type: rewrite
+        source: /api/team-signup/voucher-eligible
+        destination: /api/fixtures/voucher-eligibility.json
