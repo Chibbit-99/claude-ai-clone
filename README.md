@@ -52,3 +52,12 @@ endpoint is not mocked. No real accounts, authentication, or chat API are provid
 The organization-scoped bootstrap route reuses the demo fixture only for the
 fixture organization UUID. It is not a general organization API. User access,
 privacy-consent, referral, and eligibility endpoints are not mocked.
+
+## Missing pages
+
+The root `404.html` is the custom error page for Render Static Sites. It sends
+top-level visitors back to `/` while keeping the HTTP response a 404. Fetches
+and subresources don't execute the redirect script. The local preview serves
+this page only for top-level browser navigation to missing paths. Don't add a
+catch-all Render rewrite to `/`: that would mask missing API and asset requests.
+This does not redirect valid client-side routes or implement onboarding.

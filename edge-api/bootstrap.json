@@ -5,6 +5,13 @@
     "email_address": "demo@example.invalid",
     "full_name": "Demo User",
     "display_name": "Demo",
+    "age_is_verified": true,
+    "phone_is_verified": true,
+    "phone_number": "+12025550100",
+    "accepted_clickwrap_versions": {
+      "consumer-terms": "demo",
+      "aup": "demo"
+    },
     "settings": {
       "has_finished_claudeai_onboarding": true
     },
