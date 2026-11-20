@@ -43,3 +43,6 @@ services:
       - type: rewrite
         source: /api/organizations/00000000-0000-4000-8000-000000000002/projects/count
         destination: /api/fixtures/projects-count.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/sync/github/auth
+        destination: /api/fixtures/github-auth.json
