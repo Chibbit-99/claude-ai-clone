@@ -12100,7 +12100,125 @@
         "effort": "medium",
         "mode": "auto"
       },
-      "thinking_by_model": []
+      "thinking_by_model": [
+        {
+          "id": "claude-fable-5-2",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-5-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-sonnet-5-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-haiku-5-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-fable-5-1",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-fable-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "high",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "high",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-4-8",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "high",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-4-7",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "xhigh",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-4-6",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "extended"
+          }
+        },
+        {
+          "id": "claude-3-opus-20240229",
+          "thinking": {
+            "type": "none"
+          }
+        },
+        {
+          "id": "claude-sonnet-5",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "medium",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-sonnet-4-6",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "low",
+            "mode": "auto"
+          }
+        },
+        {
+          "id": "claude-opus-4-5-20251101",
+          "thinking": {
+            "type": "effort_and_mode",
+            "effort": "high",
+            "mode": "extended"
+          }
+        },
+        {
+          "id": "claude-opus-4-1-20250805-claude-ai",
+          "thinking": {
+            "type": "mode",
+            "mode": "extended"
+          }
+        }
+      ]
     }
   ],
   "claude_ai_available_models": {

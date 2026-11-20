@@ -1,0 +1,74 @@
+{
+  "chat": [
+    "claude-fable-5-2",
+    "claude-opus-5-5",
+    "claude-fable-5-1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6",
+    "claude-3-opus-20240229"
+  ],
+  "code": [
+    "claude-opus-5-5",
+    "claude-fable-5-2",
+    "claude-fable-5-1",
+    "claude-opus-5",
+    "claude-fable-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6"
+  ],
+  "cc": [],
+  "ccr": [],
+  "ccd": [],
+  "code_projects_coordinator": [],
+  "code_projects_threads": [],
+  "cowork": [
+    "claude-fable-5-2",
+    "claude-opus-5-5",
+    "claude-fable-5-1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6"
+  ],
+  "design": [
+    "claude-fable-5-2",
+    "claude-opus-5-5",
+    "claude-fable-5-1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6",
+    "claude-3-opus-20240229"
+  ],
+  "office_agent": [
+    "claude-fable-5-2",
+    "claude-opus-5-5",
+    "claude-fable-5-1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-4-8"
+  ],
+  "chrome": [
+    "claude-opus-5",
+    "claude-opus-4-8"
+  ],
+  "voice": [
+    "claude-fable-5-2"
+  ],
+  "claude_science": [
+    "claude-fable-5-2",
+    "claude-opus-5-5",
+    "claude-fable-5-1",
+    "claude-fable-5",
+    "claude-opus-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6"
+  ]
+}
