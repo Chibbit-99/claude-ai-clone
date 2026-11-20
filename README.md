@@ -43,6 +43,7 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/account_profile` | `/api/fixtures/account-profile.json` |
 | `/api/organizations/discoverable` | `/api/fixtures/discoverable-organizations.json` |
 | `/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks` | `/api/fixtures/activation-tasks.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/projects/count` | `/api/fixtures/projects-count.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -81,3 +82,7 @@ starred chats), no discoverable organizations or activation tasks, default
 Claude Code settings, and a fictional profile. They do not persist state
 or implement chat creation. The upstream bundle’s full response contracts
 for these fixtures have not been verified.
+
+Both bootstrap fixtures advertise one demo model using the captured selector
+configuration shape. This is display metadata, not model access. Chat history
+is intentionally empty and the project count is zero.

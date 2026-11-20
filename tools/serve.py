@@ -9,6 +9,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 REWRITES = {
     '/new': '/index.html',
+    '/api/organizations/00000000-0000-4000-8000-000000000002/projects/count': '/api/fixtures/projects-count.json',
     '/api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings': '/api/fixtures/claude-code-user-settings.json',
     '/api/organizations/00000000-0000-4000-8000-000000000002/chat_conversations_v2': '/api/fixtures/chat-conversations.json',
     '/api/account_profile': '/api/fixtures/account-profile.json',
