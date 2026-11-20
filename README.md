@@ -58,6 +58,9 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/auth/mfa/keys` | `/api/fixtures/mfa-keys.json` |
 | `/api/auth/mfa` | `/api/fixtures/mfa-status.json` |
 | `/api/account/deletion-allowed` | `/api/fixtures/deletion-allowed.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/projects` | `/api/fixtures/projects.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/projects_v2` | `/api/fixtures/projects-v2.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/activation/cowork/tasks` | `/api/fixtures/activation-tasks.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -97,8 +100,8 @@ or implement chat creation. The upstream bundle’s full response contracts
 for these fixtures have not been verified.
 
 Both bootstrap fixtures include the captured model selector catalogs and model
-metadata, but keep fictional account info and demo model preferences. Plan
-restrictions are retained. This is display metadata, not model access. Chat history
+metadata, but keep fictional account info and demo model preferences. Pro-only selector locks are removed for the simulated Pro organization;
+other disabled entries are retained. This is display metadata, not model access. Chat history
 is intentionally empty and the project count is zero.
 
 The GitHub auth GET fixture reports a disconnected integration; it does not
