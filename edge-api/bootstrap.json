@@ -1,0 +1,90 @@
+{
+  "account": {
+    "tagged_id": "user_01J00000000000000000000001",
+    "uuid": "00000000-0000-4000-8000-000000000001",
+    "email_address": "demo@example.invalid",
+    "full_name": "Demo User",
+    "display_name": "Demo",
+    "memberships": [
+      {
+        "role": "owner",
+        "organization": {
+          "id": 1,
+          "uuid": "00000000-0000-4000-8000-000000000002",
+          "name": "Demo Individual Org",
+          "settings": {
+            "account_session_duration_seconds": null,
+            "allowed_invite_domains": [],
+            "api_key_creation_enabled": false,
+            "claude_ai_chat_external_sharing_enabled": false,
+            "claude_ai_chat_sharing_enabled": false,
+            "default_workspace_settings": {
+              "enable_api_keys": false
+            },
+            "files_api_enabled": false
+          },
+          "capabilities": [
+            "api",
+            "api_individual",
+            "customer_terms:standard"
+          ],
+          "parent_organization_uuid": null,
+          "rate_limit_tier": "auto_api_evaluation",
+          "billing_type": null,
+          "free_credits_status": null,
+          "data_retention": "default",
+          "api_disabled_reason": "out_of_credits",
+          "api_disabled_until": null,
+          "billable_usage_paused_until": null,
+          "claude_ai_bootstrap_models_config": [
+            {
+              "model": "claude-fable-5-2",
+              "name": "Claude Fable 5.2",
+              "description": "For your toughest challenges",
+              "paprika_modes": [
+                "extended"
+              ],
+              "thinking_modes": [
+                {
+                  "id": "auto",
+                  "mode": "extended",
+                  "paprika_mode_value": "extended",
+                  "description": "Can think for more complex tasks",
+                  "selection_title": "Thinking",
+                  "title": "Thinking"
+                }
+              ],
+              "hard_limit": 950000
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "statsig": {
+    "user": {},
+    "values": {},
+    "values_hash": ""
+  },
+  "growthbook": {
+    "features": {},
+    "hashing_algorithm": "djb2"
+  },
+  "intercom_account_hash": null,
+  "intercom_user_jwt": null,
+  "locale": null,
+  "system_prompts": null,
+  "feature_flags": {
+    "user": {},
+    "values": {},
+    "values_hash": ""
+  },
+  "served_copy": {},
+  "gated_imports_build_id": "887f6c2a8c",
+  "gated_messages": {
+    "messages": {},
+    "gates": [],
+    "locale": "en-US"
+  },
+  "gated_imports": {}
+}
