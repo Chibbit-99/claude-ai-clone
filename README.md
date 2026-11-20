@@ -36,6 +36,7 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/api/bootstrap/00000000-0000-4000-8000-000000000002/current_user_access` | `/edge-api/current-user-access.json` |
 | `/onboarding` | `/index.html` |
 | `/edge-api/client-health/check` | `/edge-api/client-health/check.json` |
+| `/v1/privacy-consents` | `/v1/privacy-consents.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -54,7 +55,10 @@ endpoint is not mocked. No real accounts, authentication, or chat API are provid
 The organization-scoped bootstrap route serves a separate fixture only for the
 demo organization UUID. The scoped bootstrap and user-access fixtures use
 the uploaded capture as a schema reference, not as deployable account data.
-Privacy-consent, referral, and eligibility endpoints remain unmocked.
+The privacy-consent fixture returns an empty consent list, including for
+`?prefix=cookies.`. It does not grant or store consent. The upstream bundle's
+full response contract has not been verified. Referral and eligibility
+endpoints remain unmocked.
 
 ## Missing pages
 
