@@ -34,10 +34,11 @@
             "files_api_enabled": false
           },
           "capabilities": [
-            "chat"
+            "chat",
+            "claude_pro"
           ],
           "parent_organization_uuid": null,
-          "rate_limit_tier": "auto_api_evaluation",
+          "rate_limit_tier": "default_claude_pro",
           "billing_type": null,
           "free_credits_status": null,
           "data_retention": "default",
@@ -354,7 +355,7 @@
               "hard_limit": 190000
             }
           ],
-          "plan_display_name": "Free"
+          "plan_display_name": "Pro"
         }
       }
     ],
@@ -500,11 +501,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -581,11 +577,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -796,11 +787,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -885,11 +871,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -965,11 +946,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1044,11 +1020,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1122,11 +1093,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1197,11 +1163,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1235,11 +1196,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1547,11 +1503,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1690,11 +1641,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1816,11 +1762,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -1963,11 +1904,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -2039,11 +1975,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -2121,11 +2052,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -2187,11 +2113,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -2265,11 +2186,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8245,11 +8161,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8326,11 +8237,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8539,11 +8445,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8627,11 +8528,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8707,11 +8603,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8786,11 +8677,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8864,11 +8750,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -8939,11 +8820,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9172,11 +9048,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9254,11 +9125,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9466,11 +9332,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9556,11 +9417,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9636,11 +9492,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9715,11 +9566,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9793,11 +9639,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9868,11 +9709,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -9904,11 +9740,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10206,11 +10037,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10283,11 +10109,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10485,11 +10306,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10570,11 +10386,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10646,11 +10457,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10725,11 +10531,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10882,11 +10683,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -10961,11 +10757,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11130,11 +10921,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11445,11 +11231,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11527,11 +11308,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11739,11 +11515,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11829,11 +11600,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11909,11 +11675,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -11988,11 +11749,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -12066,11 +11822,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
@@ -12141,11 +11892,6 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true,
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
           }
         },
         {
