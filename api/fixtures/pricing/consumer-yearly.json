@@ -1,5 +1,9 @@
 {
   "price": 20000,
   "currency": "USD",
-  "taxDisplay": null
+  "taxDisplay": {
+    "show_included": false,
+    "tax_label": null
+  },
+  "country": "US"
 }

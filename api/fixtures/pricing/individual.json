@@ -4,12 +4,25 @@
     "max_5x_monthly": {
       "price": 10000,
       "currency": "USD",
-      "taxDisplay": null
+      "taxDisplay": {
+        "show_included": false,
+        "tax_label": null
+      },
+      "country": "US"
     },
     "max_20x_monthly": {
       "price": 20000,
       "currency": "USD",
-      "taxDisplay": null
+      "taxDisplay": {
+        "show_included": false,
+        "tax_label": null
+      },
+      "country": "US"
     }
+  },
+  "country": "US",
+  "taxDisplay": {
+    "show_included": false,
+    "tax_label": null
   }
 }
