@@ -1,0 +1,3 @@
+html[data-embedded-mobile-page-ground] body {
+  background-color: var(--cds-surface-0);
+}

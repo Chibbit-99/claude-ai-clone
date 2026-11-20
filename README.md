@@ -7,14 +7,14 @@ Serve or open `index.html` as before. It is generated from four source files in 
 - `styles.css` — inline CSS, separated by named `clone-section` comments.
 - `data.json` — named inline JSON bodies stored as arrays of lines for readability.
 
-The JavaScript and CSS files are build inputs, not bundles to load in the browser. Keep the section markers and the blank line after each section. The build restores each section to its original tag, so script order, CSS placement, and inline data access are unchanged. The source files were formatted automatically.
+Edit the four source files, then regenerate the root `index.html` and the files under `assets/runtime/`. The browser loads the generated JavaScript and CSS through ordinary `<script src>` and `<link rel="stylesheet">` tags. They stay in their original document order rather than being bundled into one script or stylesheet. Inline JSON stays in the HTML because the captured page expects it to be available synchronously in the DOM.
 
 ```sh
-python3 tools/split-clone.py build  # rebuild index.html
-python3 tools/split-clone.py check  # verify index.html matches the four sources
+python3 tools/split-clone.py build  # regenerate index.html and assets/runtime/
+python3 tools/split-clone.py check  # verify generated files match their sources
 ```
 
-To extract again from a fresh capture, replace `index.html` and run `python3 tools/split-clone.py split`. Extraction preserves the input formatting; it does not run a formatter. The extractor is designed for this capture's markup, not as a general-purpose HTML parser.
+To extract from a fresh standalone capture, first replace `index.html` with that capture, then run `python3 tools/split-clone.py split` and rebuild. Do not use `split` on the generated, linked entry point. The extractor is designed for this capture's markup, not as a general-purpose HTML parser.
 
 ## Local preview
 

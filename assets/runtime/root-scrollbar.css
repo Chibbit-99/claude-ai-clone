@@ -1,0 +1,6 @@
+:root[data-hide-root-scrollbar] {
+  scrollbar-color: transparent transparent;
+}
+:root[data-hide-root-scrollbar]:not([data-root-overflows]) {
+  scrollbar-width: none;
+}

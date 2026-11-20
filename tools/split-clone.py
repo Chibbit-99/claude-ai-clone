@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract or reassemble this captured HTML without changing its bytes."""
+"""Build the captured page with linked JavaScript and CSS assets."""
 import argparse
 import json
 from pathlib import Path
@@ -49,8 +49,8 @@ def flatten(groups):
 
 
 def split(document):
-    if SLOT.search(document):
-        raise ValueError('Input already contains extraction markers')
+    if SLOT.search(document) or b'"assets/runtime/' in document:
+        raise ValueError('Split expects a fresh standalone capture, not generated HTML')
     groups = {kind: {} for kind in FILES}
     count = 0
 
@@ -86,6 +86,34 @@ def assemble(template, read_asset):
     return SLOT.sub(lambda match: read_asset(match[1].decode()), template)
 
 
+def link_assets(template, assets):
+    outputs = {}
+
+    def link(match):
+        opening, tag, body, closing = match.groups()
+        slot = SLOT.fullmatch(body)
+        if not slot:
+            return match[0]
+        key = slot[1].decode()
+        kind, name = key.split('/')
+        if kind == 'data':
+            # Existing bootstrap code reads these payloads synchronously from the DOM.
+            return opening + assets[key] + closing
+        ext = 'js' if kind == 'scripts' else 'css'
+        path = f'assets/runtime/{name}.{ext}'
+        outputs[ROOT / path] = assets[key] + b'\n'
+        url = path.encode()
+        if tag.lower() == b'script':
+            # A classic script without async/defer stays parser-blocking.
+            return opening[:-1] + b' src="' + url + b'">' + closing
+        return b'<link rel="stylesheet" href="' + url + b'"' + opening[6:]
+
+    document = BLOCK.sub(link, template)
+    if SLOT.search(document):
+        raise ValueError('Found an unresolved asset section in the HTML')
+    return {INDEX: document, **outputs}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['split', 'build', 'check'])
@@ -95,13 +123,16 @@ def main():
         return
     assets = flatten({kind: unpack(kind, (SOURCE / filename).read_bytes())
                       for kind, filename in FILES.items()})
-    document = assemble(TEMPLATE.read_bytes(), assets.__getitem__)
+    outputs = link_assets(TEMPLATE.read_bytes(), assets)
     if command == 'build':
-        INDEX.write_bytes(document)
-    elif INDEX.read_bytes() != document:
-        parser.exit(1, 'index.html is out of sync; run tools/split-clone.py build with Python 3.\n')
+        for path, contents in outputs.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(contents)
     else:
-        print('index.html matches the assembled source byte for byte.')
+        for path, contents in outputs.items():
+            if not path.is_file() or path.read_bytes() != contents:
+                parser.exit(1, f'{path.relative_to(ROOT)} is out of sync; run build.\n')
+        print('index.html and its linked assets match the source files.')
 
 
 if __name__ == '__main__':
