@@ -19,3 +19,6 @@ services:
       - type: rewrite
         source: /edge-api/client-health/check
         destination: /edge-api/client-health/check.json
+      - type: rewrite
+        source: /v1/privacy-consents
+        destination: /v1/privacy-consents.json
