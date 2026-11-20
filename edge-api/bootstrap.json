@@ -5,6 +5,9 @@
     "email_address": "demo@example.invalid",
     "full_name": "Demo User",
     "display_name": "Demo",
+    "settings": {
+      "has_finished_claudeai_onboarding": true
+    },
     "memberships": [
       {
         "role": "owner",
