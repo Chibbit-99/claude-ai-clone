@@ -85,3 +85,12 @@ services:
       - type: rewrite
         source: /api/account/deletion-allowed
         destination: /api/fixtures/deletion-allowed.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/projects
+        destination: /api/fixtures/projects.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/projects_v2
+        destination: /api/fixtures/projects-v2.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/activation/cowork/tasks
+        destination: /api/fixtures/activation-tasks.json

@@ -437,10 +437,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -519,8 +515,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5-5",
@@ -528,10 +523,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -600,8 +591,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -734,10 +724,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -815,8 +801,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -824,10 +809,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -904,18 +885,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5",
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -984,18 +960,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1063,18 +1034,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-7",
           "name": "Opus 4.7",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1141,18 +1107,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-6",
           "name": "Opus 4.6",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1216,18 +1177,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-3-opus-20240229",
           "name": "Opus 3",
           "short_name": "Opus 3",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": false,
             "gsuite_tools": false,
@@ -1254,8 +1210,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
@@ -1487,10 +1442,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1566,8 +1517,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -1625,10 +1575,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1709,8 +1655,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-haiku-5-5",
@@ -1767,10 +1712,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1835,8 +1776,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-haiku-4-5-20251001",
@@ -1908,10 +1848,6 @@
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -1982,8 +1918,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -1991,10 +1926,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -2058,18 +1989,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -2140,18 +2066,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-7",
           "name": "Opus 4.7",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -2206,18 +2127,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-6",
           "name": "Opus 4.6",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -2284,8 +2200,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-4-6",
@@ -8183,10 +8098,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8264,8 +8175,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5-5",
@@ -8273,10 +8183,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8345,8 +8251,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -8478,10 +8383,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8558,8 +8459,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -8567,10 +8467,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is included with Max and Ultra, or available with usage credits on Pro.",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8646,18 +8542,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5",
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8726,18 +8617,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8805,18 +8691,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-7",
           "name": "Opus 4.7",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8883,18 +8764,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-6",
           "name": "Opus 4.6",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -8958,8 +8834,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
@@ -9108,10 +8983,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9191,8 +9062,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5-5",
@@ -9200,10 +9070,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9273,8 +9139,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -9403,10 +9268,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9485,8 +9346,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -9494,10 +9354,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9575,18 +9431,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5",
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9655,18 +9506,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9734,18 +9580,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-7",
           "name": "Opus 4.7",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9812,18 +9653,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-6",
           "name": "Opus 4.6",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -9887,18 +9723,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-3-opus-20240229",
           "name": "Opus 3",
           "short_name": "Opus 3",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": false,
             "gsuite_tools": false,
@@ -9923,8 +9754,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
@@ -10147,10 +9977,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10225,8 +10051,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5-5",
@@ -10234,10 +10059,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10302,8 +10123,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -10427,10 +10247,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10504,8 +10320,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -10513,10 +10328,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10589,18 +10400,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5",
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10665,18 +10471,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10744,8 +10545,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
@@ -10833,10 +10633,6 @@
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10901,18 +10697,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -10980,8 +10771,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
@@ -11071,10 +10861,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11149,8 +10935,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-haiku-5-5",
@@ -11381,10 +11166,6 @@
           "description": "For your toughest challenges",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11464,8 +11245,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5-5",
@@ -11473,10 +11253,6 @@
           "short_name": "Opus",
           "description": "For complex work and everyday tasks",
           "section": "main",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11546,8 +11322,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5-5",
@@ -11676,10 +11451,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11758,8 +11529,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-fable-5",
@@ -11767,10 +11537,6 @@
           "short_name": "Fable",
           "notice_text": "Fable is the most capable model and draws down usage much faster than Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11848,18 +11614,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-5",
           "name": "Opus 5",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -11928,18 +11689,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-8",
           "name": "Opus 4.8",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -12007,18 +11763,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-7",
           "name": "Opus 4.7",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -12085,18 +11836,13 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-opus-4-6",
           "name": "Opus 4.6",
           "short_name": "Opus",
           "section": "overflow",
-          "disabled_reason": {
-            "type": "upgrade_required",
-            "required_plan": "pro"
-          },
           "capabilities": {
             "compass": true,
             "gsuite_tools": true,
@@ -12160,8 +11906,7 @@
               "redirect_hint": null
             },
             "is_dismissible": false
-          },
-          "disabled": true
+          }
         },
         {
           "id": "claude-sonnet-5",
