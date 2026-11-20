@@ -25,6 +25,21 @@ class Handler(SimpleHTTPRequestHandler):
         return super().translate_path(REWRITES.get(urlsplit(path).path, path))
 
 
+    def send_error(self, code, message=None, explain=None):
+        if (code == 404 and self.command == 'GET'
+                and urlsplit(self.path).path != '/'
+                and self.headers.get('Sec-Fetch-Mode') == 'navigate'
+                and self.headers.get('Sec-Fetch-Dest') == 'document'):
+            body = (ROOT / '404.html').read_bytes()
+            self.send_response(404)
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        super().send_error(code, message, explain)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8000)
