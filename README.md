@@ -37,6 +37,12 @@ this Blueprint, add these as **Rewrite** rules under Redirects/Rewrites:
 | `/onboarding` | `/index.html` |
 | `/edge-api/client-health/check` | `/edge-api/client-health/check.json` |
 | `/v1/privacy-consents` | `/v1/privacy-consents.json` |
+| `/new` | `/index.html` |
+| `/api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings` | `/api/fixtures/claude-code-user-settings.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/chat_conversations_v2` | `/api/fixtures/chat-conversations.json` |
+| `/api/account_profile` | `/api/fixtures/account-profile.json` |
+| `/api/organizations/discoverable` | `/api/fixtures/discoverable-organizations.json` |
+| `/api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks` | `/api/fixtures/activation-tasks.json` |
 
 `bootstrap-prefetch.js` parses JSON but doesn't validate its schema. The
 bootstrap fixture follows the supplied response example's account, membership,
@@ -68,3 +74,10 @@ and subresources don't execute the redirect script. The local preview serves
 this page only for top-level browser navigation to missing paths. Don't add a
 catch-all Render rewrite to `/`: that would mask missing API and asset requests.
 This does not redirect valid client-side routes or implement onboarding.
+
+The `/new` rewrite serves the same app entry point as `/`. The demo GET
+fixtures under `api/fixtures/` provide an empty chat history (including
+starred chats), no discoverable organizations or activation tasks, default
+Claude Code settings, and a fictional profile. They do not persist state
+or implement chat creation. The upstream bundle’s full response contracts
+for these fixtures have not been verified.

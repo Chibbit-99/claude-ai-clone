@@ -22,3 +22,21 @@ services:
       - type: rewrite
         source: /v1/privacy-consents
         destination: /v1/privacy-consents.json
+      - type: rewrite
+        source: /new
+        destination: /index.html
+      - type: rewrite
+        source: /api/claude_code/organizations/00000000-0000-4000-8000-000000000002/user_settings
+        destination: /api/fixtures/claude-code-user-settings.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/chat_conversations_v2
+        destination: /api/fixtures/chat-conversations.json
+      - type: rewrite
+        source: /api/account_profile
+        destination: /api/fixtures/account-profile.json
+      - type: rewrite
+        source: /api/organizations/discoverable
+        destination: /api/fixtures/discoverable-organizations.json
+      - type: rewrite
+        source: /api/organizations/00000000-0000-4000-8000-000000000002/activation/chorus_free/tasks
+        destination: /api/fixtures/activation-tasks.json
