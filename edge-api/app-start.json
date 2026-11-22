@@ -35,10 +35,10 @@
           },
           "capabilities": [
             "chat",
-            "claude_pro"
+            "claude_max"
           ],
           "parent_organization_uuid": null,
-          "rate_limit_tier": "default_claude_pro",
+          "rate_limit_tier": "default_claude_max_20x",
           "billing_type": null,
           "free_credits_status": null,
           "data_retention": "default",
@@ -355,7 +355,7 @@
               "hard_limit": 190000
             }
           ],
-          "plan_display_name": "Pro"
+          "plan_display_name": "Ultra"
         }
       }
     ],
